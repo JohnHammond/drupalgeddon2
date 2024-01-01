@@ -1,4 +1,16 @@
 # drupalgeddon2
+
+
+This is a duplicate of https://github.com/lorddemon/drupalgeddon2/
+
+Just tweaked very slightly to work fine with `python3`. 
+
+That's it.
+
+-----------------------------------------
+
+
+
 Exploit for CVE-2018-7600.
 
 Usage: drupalgeddon2 options 
